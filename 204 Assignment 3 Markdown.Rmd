@@ -1,0 +1,45 @@
+---
+title: "204Assignment-3"
+author: "Andrea Cheung"
+date: "5/19/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+
+data <- read_csv("HW3Data.csv")
+
+
+
+```
+
+```{r}
+#Linear Probability Model
+
+vote_lm1 <- lm(vote ~ risk + age + income + NEP + bid, data = data)
+summary(vote_lm1)
+
+
+plot(vote_lm1)
+
+coeffs <- coefficients(vote_lm1)
+coeffs
+```
+
+Three Arbitrary respondents
+Risk, bid, vote, NEP, income,   age
+60    40    1     46  poor      toforty
+20    40    0     27  very_rich toforty
+60    40    1     32  poor      tothirty
+
+```{r}
+
+
+
+```
+
